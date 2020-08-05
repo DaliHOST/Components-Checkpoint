@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import ProfilePhoto from "./Component/profile/ProfilPhoto";
+import Adress from "./Component/profile/Address";
+import Fullname from "./Component/profile/FullName";
+import {
+  Card,ListGroup,ListGroupItem
+} from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Card style={{ width: '18rem'}}>
+      <ProfilePhoto />
+        <Card.Body>
+          <Card.Title><Fullname /></Card.Title>
+          <Card.Text>
+          <Adress />
+    </Card.Text>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 
